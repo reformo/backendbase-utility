@@ -1,6 +1,6 @@
 {
     "name": "selami/stdlib",
-    "description": "Standart Library for Selami libraries.",
+    "description": "Standard Library for Selami libraries.",
     "type": "library",
     "license": "MIT",
     "authors": [
