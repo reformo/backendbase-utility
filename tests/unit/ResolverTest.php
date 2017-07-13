@@ -7,7 +7,7 @@ use Selami\Resources\TypeHintedClass;
 use Codeception\Test\Test;
 use Codeception\Test\Unit;
 
-class ParameterResolverTest extends Unit
+class ResolverTest extends Unit
 {
     /**
      * @var \UnitTester

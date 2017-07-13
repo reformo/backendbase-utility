@@ -19,16 +19,10 @@ class Resolver
 
     public static function getParameterHints(string $className, string $methodName) : array
     {
-        if (! class_exists($className)) {
-            throw new InvalidArgumentException(
-                sprintf('%s class does not exist!', $className)
-            );
-        }
-        if (! method_exists($className, $methodName)) {
-            throw new InvalidArgumentException(
-                sprintf('%s does not have method named %s!', $className, $methodName)
-            );
-        }
+
+        self::checkClassName($className);
+        self::checkMethodName($className, $methodName);
+
         $method = new ReflectionMethod($className, $methodName);
         /**
          * @var array $parameters
@@ -42,6 +36,23 @@ class Resolver
         return $parameterHints;
     }
 
+    private static function checkClassName(string $className) : void
+    {
+        if (! class_exists($className)) {
+            throw new InvalidArgumentException(
+                sprintf('%s class does not exist!', $className)
+            );
+        }
+    }
+
+    private static function checkMethodName(string $className, string $methodName) : void
+    {
+        if (! method_exists($className, $methodName)) {
+            throw new InvalidArgumentException(
+                sprintf('%s does not have method named %s!', $className, $methodName)
+            );
+        }
+    }
 
     /**
      * @param ReflectionParameter $parameter
