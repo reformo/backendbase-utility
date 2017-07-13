@@ -52,10 +52,10 @@ class Resolver
     {
         $type = $parameter->getType();
         if ($type->isBuiltin()) {
-            return ['name' => $parameter->getName(), 'type' => (string) $type];
+            return ['name' => $parameter->name, 'type' => (string) $type];
         }
         try {
-            return ['name' => $parameter->getName(), 'type' =>$parameter->getClass()->name];
+            return ['name' => $parameter->name, 'type' =>$parameter->getClass()->name];
         } catch (ReflectionException $e) {
             throw new InvalidArgumentException($e->getMessage());
         }
