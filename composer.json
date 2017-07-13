@@ -1,0 +1,30 @@
+{
+    "name": "selami/stdlib",
+    "description": "Standart Library for Selami libraries.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mehmet Korkmaz",
+            "email": "mehmet@mkorkmaz.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "require-dev": {
+        "codeception/codeception": "^2.3",
+        "satooshi/php-coveralls": "~1.0"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Selami\\Stdlib\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Selami\\Resources\\" : "tests/resources/src/"
+        }
+    }
+
+}

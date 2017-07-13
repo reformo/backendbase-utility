@@ -1,0 +1,235 @@
+<?php
+$coverage = new SebastianBergmann\CodeCoverage\CodeCoverage;
+$coverage->setData(array (
+  '/Volumes/MK/Projects/selamiphp/stdlib/src/CaseConverter.php' => 
+  array (
+    19 => 
+    array (
+      0 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #0',
+      1 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #1',
+      2 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #2',
+      3 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #3',
+      4 => 'CaseConverterTest::shouldConvertStringToCamelCaseSuccessfully with data set #0',
+    ),
+    20 => 
+    array (
+      0 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #0',
+      1 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #1',
+      2 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #2',
+      3 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #3',
+      4 => 'CaseConverterTest::shouldConvertStringToCamelCaseSuccessfully with data set #0',
+    ),
+    21 => 
+    array (
+      0 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #0',
+      1 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #1',
+      2 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #2',
+      3 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #3',
+      4 => 'CaseConverterTest::shouldConvertStringToCamelCaseSuccessfully with data set #0',
+    ),
+    22 => 
+    array (
+      0 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #0',
+      1 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #1',
+      2 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #2',
+      3 => 'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #3',
+      4 => 'CaseConverterTest::shouldConvertStringToCamelCaseSuccessfully with data set #0',
+    ),
+    23 => NULL,
+    34 => 
+    array (
+      0 => 'CaseConverterTest::shouldConvertStringToCamelCaseSuccessfully with data set #0',
+    ),
+    35 => NULL,
+    47 => 
+    array (
+      0 => 'CaseConverterTest::shouldConvertStringToSnakeCaseSuccessfully with data set #0',
+    ),
+    48 => 
+    array (
+      0 => 'CaseConverterTest::shouldConvertStringToSnakeCaseSuccessfully with data set #0',
+    ),
+    49 => 
+    array (
+      0 => 'CaseConverterTest::shouldConvertStringToSnakeCaseSuccessfully with data set #0',
+    ),
+    50 => NULL,
+  ),
+  '/Volumes/MK/Projects/selamiphp/stdlib/src/Resolver.php' => 
+  array (
+    22 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0',
+      1 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+      2 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClass',
+      3 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingMethod',
+      4 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    23 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClass',
+    ),
+    24 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClass',
+    ),
+    27 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0',
+      1 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+      2 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingMethod',
+      3 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    28 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingMethod',
+    ),
+    29 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingMethod',
+    ),
+    32 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0',
+      1 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+      2 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    36 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0',
+      1 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+      2 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    37 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0',
+      1 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+      2 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    38 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0',
+      1 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+      2 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    39 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0',
+      1 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+      2 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    40 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0',
+      1 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+      2 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    42 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0',
+      1 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+    ),
+    43 => NULL,
+    53 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0',
+      1 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+      2 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    54 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0',
+      1 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+      2 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    55 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+      1 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    58 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0',
+      1 => 'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1',
+      2 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    59 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    60 => 
+    array (
+      0 => 'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint',
+    ),
+    62 => NULL,
+  ),
+  '/Volumes/MK/Projects/selamiphp/stdlib/src/Exception/InvalidArgumentException.php' => 
+  array (
+  ),
+));
+$coverage->setTests(array (
+  'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #0' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #1' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #2' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'CaseConverterTest::shouldConvertStringToPascalCaseSuccessfully with data set #3' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'CaseConverterTest::shouldConvertStringToCamelCaseSuccessfully with data set #0' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'CaseConverterTest::shouldConvertStringToSnakeCaseSuccessfully with data set #0' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #0' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'ParameterResolverTest::getTypeHintClassesSuccessfully with data set #1' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClass' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingMethod' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'ParameterResolverTest::getTypeHintClassesShouldThrowExceptionForNonExistingClassHint' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+));
+
+$filter = $coverage->filter();
+$filter->setWhitelistedFiles(array (
+  '/Volumes/MK/Projects/selamiphp/stdlib/src/CaseConverter.php' => true,
+  '/Volumes/MK/Projects/selamiphp/stdlib/src/Exception/InvalidArgumentException.php' => true,
+  '/Volumes/MK/Projects/selamiphp/stdlib/src/Resolver.php' => true,
+));
+
+return $coverage;
