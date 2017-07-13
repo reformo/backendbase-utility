@@ -61,12 +61,10 @@ class CaseConverterTest extends Unit
     public function camelCaseDataProvider() : array
     {
         return [
-            [
-                'Kedibey ve Mirmir', 'kedibeyVeMirmir',
-                'KEDİBEY VE MIRMIR', 'kedibeyVeMirmir',
-                'kedibey ve mirmit', 'kedibeyVeMirmir',
-                'kedibey_ve_mirmir', 'kedibeyVeMirmir'
-            ]
+            ['Kedibey ve Mirmir', 'kedibeyVeMirmir'],
+            ['KEDİBEY VE MIRMIR', 'kedibeyVeMirmir'],
+            ['kedibey ve mirmir', 'kedibeyVeMirmir'],
+            ['kedibey_ve_mirmir', 'kedibeyVeMirmir']
         ];
     }
 
@@ -87,11 +85,9 @@ class CaseConverterTest extends Unit
     public function snakeCaseDataProvider() : array
     {
         return [
-            [
-                'Kedibey ve Mirmir', 'kedibey_ve_mirmir',
-                'kedibey ve mirmit', 'kedibey_ve_mirmir',
-                'KedibeyVeMirmir', 'kedibey_ve_mirmir'
-            ]
+            ['Kedibey ve Mirmir', 'kedibey_ve_mirmir'],
+            ['kedibey ve mirmir', 'kedibey_ve_mirmir'],
+            ['KedibeyVeMirmir', 'kedibey_ve_mirmir']
         ];
     }
 }

@@ -43,8 +43,8 @@ class CaseConverter
     public static function toSnakeCase(string $source) : string
     {
         // If the string is pascal/camel case
-        $modified = preg_replace('/(\w)([A-Z]+)/', ' $1', $source);
-        $lowercase = mb_strtolower($modified);
+        $modified = str_replace('  ',' ',preg_replace('/[A-Z]+/', ' $0', $source));
+        $lowercase = mb_strtolower(trim($modified));
         return str_replace(' ', '_', $lowercase);
     }
 }
