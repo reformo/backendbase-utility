@@ -1,5 +1,8 @@
 <?php
 
+namespace SelamiTest;
+
+use Selami;
 use Selami\Resources\TypeHintedClass;
 use Codeception\Test\Test;
 use Codeception\Test\Unit;

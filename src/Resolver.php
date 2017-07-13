@@ -60,5 +60,4 @@ class Resolver
             throw new InvalidArgumentException($e->getMessage());
         }
     }
-
 }

@@ -11,7 +11,6 @@ class TypeHintedClass
 {
     public function __construct(Test $test, Unit $unit)
     {
-
     }
 
     public function method(array $config, Unit $unit) : void

@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Selami\Stdlib;
 
-
 class CaseConverter
 {
     /**
@@ -48,5 +47,4 @@ class CaseConverter
         $lowercase = mb_strtolower($modified);
         return str_replace(' ', '_', $lowercase);
     }
-
 }

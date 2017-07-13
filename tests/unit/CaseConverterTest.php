@@ -1,5 +1,7 @@
 <?php
 
+namespace SelamiTest;
+
 use Codeception\Test\Unit;
 use Selami\Stdlib\CaseConverter;
 
@@ -92,5 +94,4 @@ class CaseConverterTest extends Unit
             ]
         ];
     }
-
 }
