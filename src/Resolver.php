@@ -10,6 +10,14 @@ use ReflectionException;
 
 class Resolver
 {
+    const ARRAY = 'array';
+    const CALLABLE = 'callable';
+    const BOOLEAN = 'boolean';
+    const FLOAT = 'float';
+    const INTEGER = 'int';
+    const STRING = 'string';
+    const ITERABLE = 'iterable';
+
     /**
      * @param string $className
      * @param string $methodName
