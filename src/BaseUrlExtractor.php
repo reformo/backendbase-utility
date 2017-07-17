@@ -3,10 +3,9 @@ declare(strict_types=1);
 
 namespace Selami\Stdlib;
 
-
 class BaseUrlExtractor
 {
-    public static function getBaseUrl( array $httpServerData) : string
+    public static function getBaseUrl(array $httpServerData) : string
     {
         $protocol = self::getProtocol($httpServerData);
         $host = self::getHost($httpServerData);
@@ -16,7 +15,7 @@ class BaseUrlExtractor
         $phpSelf = $httpServerData['PHP_SELF'];
         $origScriptName = $httpServerData['ORIG_SCRIPT_NAME'] ?? '';
         $baseUrl = self::getRelativeBaseUrl($scriptName, $phpSelf, $filename, $origScriptName);
-        return trim(self::determineFullBaseUrl($baseUrl, $protocol, $host, $uriPath),'/');
+        return trim(self::determineFullBaseUrl($baseUrl, $protocol, $host, $uriPath), '/');
     }
 
     public static function determineFullBaseUrl($baseUrl, $protocol, $host, $uriPath): string
@@ -46,7 +45,7 @@ class BaseUrlExtractor
         ) {
             $baseUrl = substr($uriPath, 0, $pos + strlen($baseUrl));
         }
-        return trim($protocol . '://' . $host .$baseUrl,'/');
+        return trim($protocol . '://' . $host .$baseUrl, '/');
     }
 
 

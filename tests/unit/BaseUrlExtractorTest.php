@@ -27,7 +27,7 @@ class myBaseUrlExtractor extends \Codeception\Test\Unit
     {
         $_SERVER = $serverData;
         $baseurl = BaseUrlExtractor::getBaseUrl($serverData);
-        $this->assertEquals($expected,$baseurl);
+        $this->assertEquals($expected, $baseurl);
     }
 
 
