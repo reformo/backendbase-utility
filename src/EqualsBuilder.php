@@ -46,7 +46,7 @@ final class EqualsBuilder
 
     private function checkIfValuesAreClass($leftHandedValue, $rightHandedValue) : bool
     {
-        if (! is_object($leftHandedValue)) {
+        if (! is_object($leftHandedValue) || ! is_object($rightHandedValue)) {
             return false;
         }
         if (get_class($leftHandedValue) !== get_class($rightHandedValue)) {
@@ -69,9 +69,6 @@ final class EqualsBuilder
             $rightHandedObject,
             $reflectionOfRightHandedObject
         );
-        if (count($propertiesOfLeftHandedObject) !== count($propertiesOfRightHandedObject)) {
-            return false;
-        }
         return $this->checkValuesRecursively($propertiesOfRightHandedObject, $propertiesOfLeftHandedObject);
     }
 
@@ -79,7 +76,6 @@ final class EqualsBuilder
         array $propertiesOfLeftHandedObject,
         array $propertiesOfRightHandedObject
     ) : bool {
-    
         $innerEqualsBuilder = self::create();
         foreach ($propertiesOfLeftHandedObject as $propertyName => $propertyValue) {
             $innerEqualsBuilder = $innerEqualsBuilder->append(
