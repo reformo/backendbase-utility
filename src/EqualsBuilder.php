@@ -26,7 +26,7 @@ final class EqualsBuilder
         if ($this->isEquals === false) {
             return $this;
         }
-        if ($this->checkIfValuesAreClass($leftHandedValue, $rightHandedValue)) {
+        if ($this->checkIfValuesAreAnObjectAndEqual($leftHandedValue, $rightHandedValue)) {
             return $this;
         }
         if ($this->checkForSameType($leftHandedValue, $rightHandedValue)) {
@@ -44,9 +44,9 @@ final class EqualsBuilder
         return true;
     }
 
-    private function checkIfValuesAreClass($leftHandedValue, $rightHandedValue) : bool
+    private function checkIfValuesAreAnObjectAndEqual($leftHandedValue, $rightHandedValue) : bool
     {
-        if (! is_object($leftHandedValue) || ! is_object($rightHandedValue)) {
+        if (! $this->checkIfValuesAreAnObject($leftHandedValue, $rightHandedValue)) {
             return false;
         }
         if (get_class($leftHandedValue) !== get_class($rightHandedValue)) {
@@ -58,6 +58,10 @@ final class EqualsBuilder
             return false;
         }
         return true;
+    }
+    private function checkIfValuesAreAnObject($leftHandedValue, $rightHandedValue) : bool
+    {
+        return (is_object($leftHandedValue) && is_object($rightHandedValue));
     }
 
     private function compareObjectProperties($leftHandedObject, $rightHandedObject) : bool
