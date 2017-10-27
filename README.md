@@ -42,7 +42,7 @@ class SomeValueObject()
 		return EqualsBuilder::create()
 			->append($this->value1, $otherObject->getValue1())
 			->append($this->value2, $otherObject->getValue2())
-            ->isEquals();
+        	->isEquals(); 
 	}
 }
 ```
@@ -56,6 +56,8 @@ This class provides a method to obtain typehints of a method. Intended to be use
 
 ```php
 <?php
+declare(strict_types=1);
+
 use Selami\Stdlib\Resolver;
 
 class BlogService {}
@@ -91,9 +93,12 @@ This class provides methods to convert strings to camelCase, PascalCase or snake
 
 
 ```php
+<?php
+declare(strict_types=1);
+
 use Selami\Stdlib\CaseConverter;
 
-$source = 'test string'
+$source = 'test string';
 $result = CaseConverter::toCamelCase($source); // returns: testString
 $result = CaseConverter::toPascalCase($source); // returns: TestString
 $result = CaseConverter::toSnakeCase($source); // returns: test_string
@@ -106,6 +111,9 @@ This class provides a methods to get short version of git. For deployments using
 
 ```php
 // common.php
+<?php
+declare(strict_types=1);
+
 use Selami\Stdlib\Git\Version;
 
 $gitVersion = Version::short();
@@ -117,7 +125,6 @@ $twig->addGlobal('version', $gitVersion);
 <!-- main.twig -->
 <html>
 <head>
-
     <link href="/assets/css/main.css?v={{version}}" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/assets/js/main.min.js?v={{version}}"></script>
 </head>
@@ -136,6 +143,9 @@ This class provides a methods to get base url where applications runs.
 Caution: This method may not return real base url if you are behind some services like Cloudflare.
 
 ```php
+<?php
+declare(strict_types=1);
+
 use Selami\Stdlib\BaseUrlExtractor;
 
 $baseUrl = BaseUrlExtractor::getBaseUrl($_SERVER);
@@ -150,6 +160,5 @@ http://127.0.0.1:8080
 http://127.0.0.1:8080/myapp
 
 https://myapp.com
-
 */
 ```
