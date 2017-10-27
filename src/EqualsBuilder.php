@@ -8,7 +8,7 @@ use ReflectionClass;
 /**
  * Class EqualsBuilder
  *
- * This class provides methods to build a good equals method for any class. Intended to be use to compare Value Objects.
+ * This class provides methods to build a equals method for any class. Intended to be use to compare Value Objects.
  * @package Selami\Stdlib
  *
  */
