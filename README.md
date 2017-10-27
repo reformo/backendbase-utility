@@ -110,8 +110,8 @@ This class provides a methods to get short version of git. For deployments using
 
 
 ```php
-// common.php
-<?php
+<?php // common.php
+
 declare(strict_types=1);
 
 use Selami\Stdlib\Git\Version;
@@ -140,7 +140,7 @@ $twig->addGlobal('version', $gitVersion);
 
 This class provides a methods to get base url where applications runs. 
 
-Caution: This method may not return real base url if you are behind some services like Cloudflare.
+Caution: This method may not return real base url if you are behind some services like Cloudflare and when you use Flexible SSL feature.
 
 ```php
 <?php
