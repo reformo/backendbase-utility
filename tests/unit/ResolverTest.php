@@ -33,8 +33,6 @@ class ResolverTest extends Unit
     {
         $returned = Selami\Stdlib\Resolver::getParameterHints($className, $methodName);
 
-        var_dump($returned);
-
         $this->assertEquals($expected, $returned);
     }
 

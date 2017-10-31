@@ -152,9 +152,7 @@ $baseUrl = BaseUrlExtractor::getBaseUrl($_SERVER);
 
 echo $baseUrl;
 
-/*
-Prints base url like:
-
+/* Prints base url like:
 http://127.0.0.1:8080
 
 http://127.0.0.1:8080/myapp
