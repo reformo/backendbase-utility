@@ -15,7 +15,8 @@
     },
     "require-dev": {
         "codeception/codeception": "^2.4",
-        "php-coveralls/php-coveralls": "~1.1"
+        "php-coveralls/php-coveralls": "~1.1",
+        "sebastian/version": "^2.0"
 
     },
     "autoload": {

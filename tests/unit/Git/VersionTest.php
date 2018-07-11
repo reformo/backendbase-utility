@@ -4,7 +4,7 @@ namespace SelamiTest;
 
 use Codeception\Test\Unit;
 use Selami\Stdlib\Git\Version;
-
+use SebastianBergmann\Version as SBVersion;
 class VersionTest extends Unit
 {
     /**
@@ -26,13 +26,13 @@ class VersionTest extends Unit
      */
     public function shouldReturnShortGitVersion() : void
     {
-        $fileName = \dirname(__DIR__, 3).'/.git/refs/heads/master';
-        if (!file_exists($fileName)) {
-           \file_put_contents($fileName, 'kedibey9--');
-        }
-        $expected =  substr(file_get_contents(dirname(__DIR__, 3).'/.git/refs/heads/master'), 0, 7);
+        $path = dirname(__DIR__, 3);
+        $version = new SBVersion(
+            '1.0.0', $path
+        );
+        $haystack = $version->getVersion();
         $result = Version::short();
-        $this->assertEquals($expected, $result);
+        $this->assertContains($result, $haystack);
     }
 
 }
