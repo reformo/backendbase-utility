@@ -26,9 +26,9 @@ class VersionTest extends Unit
      */
     public function shouldReturnShortGitVersion() : void
     {
-        $fileName = dirname(__DIR__, 3).'/.git/refs/heads/master';
+        $fileName = \dirname(__DIR__, 3).'/.git/refs/heads/master';
         if (!file_exists($fileName)) {
-           put_file_contents($fileName, 'kedibey9--');
+           \file_put_contents($fileName, 'kedibey9--');
         }
         $expected =  substr(file_get_contents(dirname(__DIR__, 3).'/.git/refs/heads/master'), 0, 7);
         $result = Version::short();
