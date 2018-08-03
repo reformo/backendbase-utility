@@ -21,6 +21,9 @@ class BaseUrlExtractor
 
     public static function getProtocol(array $httpServerData) : string
     {
+        if (isset($httpServerData['HTTP_X_FORWARDED_PROTO'])) {
+            return $httpServerData['HTTP_X_FORWARDED_PROTO'];
+        }
         return isset($httpServerData['HTTPS']) && $httpServerData['HTTPS'] !== 'Off' ? 'https': 'http';
     }
 
