@@ -5,6 +5,7 @@ namespace Selami\Stdlib;
 
 use ReflectionMethod;
 use ReflectionParameter;
+use Selami\Stdlib\Exception\ClassOrMethodCouldNotBeFound;
 use Selami\Stdlib\Exception\InvalidArgumentException;
 use ReflectionException;
 
@@ -23,6 +24,7 @@ class Resolver
      * @param string $methodName
      * @return array
      * @throws InvalidArgumentException
+     * @throws ClassOrMethodCouldNotBeFound
      */
 
     public static function getParameterHints(string $className, string $methodName) : array
@@ -30,8 +32,13 @@ class Resolver
 
         self::checkClassName($className);
         self::checkMethodName($className, $methodName);
-
-        $method = new ReflectionMethod($className, $methodName);
+        try {
+            $method = new ReflectionMethod($className, $methodName);
+        } catch (ReflectionException $e) {
+            throw new ClassOrMethodCouldNotBeFound(
+                sprintf('%s::%s coulnd not be found.', $className, $methodName)
+            );
+        }
         /**
          * @var array $parameters
          */
