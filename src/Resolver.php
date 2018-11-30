@@ -72,7 +72,7 @@ class Resolver
     /**
      * @param ReflectionParameter $parameter
      * @return array
-     * @throws InvalidArgumentException
+     * @throws ClassOrMethodCouldNotBeFound
      */
     private static function getParamType(ReflectionParameter $parameter) :array
     {
@@ -81,9 +81,9 @@ class Resolver
             return ['name' => $parameter->name, 'type' => (string) $type];
         }
         try {
-            return ['name' => $parameter->name, 'type' =>$parameter->getClass()->name];
+            return ['name' => $parameter->name, 'type' => $parameter->getClass()->name];
         } catch (ReflectionException $e) {
-            throw new InvalidArgumentException($e->getMessage());
+            throw new ClassOrMethodCouldNotBeFound($e->getMessage());
         }
     }
 }
