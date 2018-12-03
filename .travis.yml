@@ -11,7 +11,7 @@ before_script:
 script:
     - vendor/bin/codecept run --coverage --coverage-xml --coverage-html
 after_script:
-    - if [ $TRAVIS_PHP_VERSION == '7.3' ]; then php vendor/bin/coveralls; fi
+    - if [ $TRAVIS_PHP_VERSION == '7.2' ]; then php vendor/bin/coveralls; fi
 after_success:
     - travis_retry php vendor/bin/coveralls -v
 
