@@ -11,12 +11,11 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.1"
+        "php": "^7.2"
     },
     "require-dev": {
-        "codeception/codeception": "^2.4",
-        "php-coveralls/php-coveralls": "~1.1",
-        "sebastian/version": "^2.0"
+        "codeception/codeception": "^2.5",
+        "php-coveralls/php-coveralls": "^2.1"
 
     },
     "autoload": {
