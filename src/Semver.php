@@ -51,21 +51,35 @@ final class Semver
 
     public function getNextPatchRelease() : string
     {
-        return $this->major . '.' . $this->minor . '.' . (++$this->patch);
+        $patch = $this->patch;
+        if ($this->preRelease === null) {
+            $patch++;
+        }
+        return $this->major . '.' . $this->minor . '.' . $patch;
     }
 
     public function getNextMinorRelease() : string
     {
-        return $this->major . '.' . (++$this->minor) . '.' . $this->patch;
+        $minor = $this->minor;
+        $patch = $this->patch;
+        if ($this->preRelease === null) {
+            $minor++;
+
+            $patch = 0;
+        }
+        return $this->major . '.' . $minor . '.' . $patch;
     }
 
     public function getNextMajorRelease() : string
     {
+        $major = $this->major;
+        $minor = $this->minor;
+        $patch = $this->patch;
         if ($this->preRelease === null) {
-            $this->major++;
+            $major++;
+            $minor = 0;
+            $patch = 0;
         }
-        return $this->major . '.'
-            . $this->minor . '.'
-            . $this->patch;
+        return $major . '.' . $minor . '.' . $patch;
     }
 }

@@ -45,7 +45,7 @@ class SemverTest extends \Codeception\Test\Unit
     {
         $version = '2.0.6';
         $semver = Semver::createFromString($version);
-        $this->assertEquals('2.1.6', $semver->getNextMinorRelease());
+        $this->assertEquals('2.1.0', $semver->getNextMinorRelease());
     }
 
     /**
@@ -55,18 +55,20 @@ class SemverTest extends \Codeception\Test\Unit
     {
         $version = '2.0.6';
         $semver = Semver::createFromString($version);
-        $this->assertEquals('3.0.6', $semver->getNextMajorRelease());
+        $this->assertEquals('3.0.0', $semver->getNextMajorRelease());
     }
 
     /**
      * @test
      */
-    public function shouldReturnNextMajorVersionWithPreReleaseSuccessfully() : void
+    public function shouldReturnNextVersionsWithPreReleaseSuccessfully() : void
     {
         $version = '2.0.6-alpha.1';
         $semver = Semver::createFromString($version);
         $this->assertEquals('2.0.6-alpha.1', $semver->getCurrent());
         $this->assertEquals('2.0.6', $semver->getNextMajorRelease());
+        $this->assertEquals('2.0.6', $semver->getNextMinorRelease());
+        $this->assertEquals('2.0.6', $semver->getNextPatchRelease());
     }
 
     /**
