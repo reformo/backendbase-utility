@@ -5,7 +5,8 @@ namespace Selami\Stdlib\Git;
 
 final class Version
 {
-    public static function short() {
+    public static function short()
+    {
         exec('git describe --always', $versionMiniHash);
         return $versionMiniHash[0];
     }
