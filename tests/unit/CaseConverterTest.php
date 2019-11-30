@@ -38,7 +38,7 @@ class CaseConverterTest extends Unit
     {
         return [
             ['Kedibey ve Mirmir', 'KedibeyVeMirmir'],
-            ['KEDİBEY VE MIRMIR', 'KedibeyVeMirmir'],
+            ['KEDIBEY VE MIRMIR', 'KedibeyVeMirmir'],
             ['kedibey ve mirmir', 'KedibeyVeMirmir'],
             ['kedibey_ve_mirmir', 'KedibeyVeMirmir']
         ];
@@ -62,7 +62,7 @@ class CaseConverterTest extends Unit
     {
         return [
             ['Kedibey ve Mirmir', 'kedibeyVeMirmir'],
-            ['KEDİBEY VE MIRMIR', 'kedibeyVeMirmir'],
+            ['KEDIBEY VE MIRMIR', 'kedibeyVeMirmir'],
             ['kedibey ve mirmir', 'kedibeyVeMirmir'],
             ['kedibey_ve_mirmir', 'kedibeyVeMirmir']
         ];

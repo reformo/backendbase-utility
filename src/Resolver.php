@@ -78,7 +78,7 @@ class Resolver
     {
         $type = $parameter->getType();
         if ($type->isBuiltin()) {
-            return ['name' => $parameter->name, 'type' => (string) $type];
+            return ['name' => $parameter->name, 'type' => $type->getName()];
         }
         try {
             return ['name' => $parameter->name, 'type' => $parameter->getClass()->name];
