@@ -16,7 +16,6 @@
     "require-dev": {
         "codeception/codeception": "^2.5",
         "php-coveralls/php-coveralls": "^2.2"
-
     },
     "autoload": {
         "psr-4": {

@@ -4,13 +4,13 @@ cache:
   apt: true
 
 php:
-    - 7.2
-    - 7.3
-    - 7.4
+  - 7.2
+  - 7.3
+  - 7.4
 before_script:
     - composer install
 script:
-    - vendor/bin/php-coveralls run --coverage --coverage-xml --coverage-html
+    - vendor/bin/codecept run --coverage --coverage-xml --coverage-html
 after_script:
     - if [ $TRAVIS_PHP_VERSION == '7.3' ]; then php vendor/bin/php-coveralls; fi
 after_success:
