@@ -5,13 +5,15 @@ cache:
 
 php:
     - 7.2
+    - 7.3
+    - 7.4
 before_script:
     - composer install
 script:
-    - vendor/bin/codecept run --coverage --coverage-xml --coverage-html
+    - vendor/bin/php-coveralls run --coverage --coverage-xml --coverage-html
 after_script:
-    - if [ $TRAVIS_PHP_VERSION == '7.2' ]; then php vendor/bin/coveralls; fi
+    - if [ $TRAVIS_PHP_VERSION == '7.3' ]; then php vendor/bin/php-coveralls; fi
 after_success:
-    - travis_retry php vendor/bin/coveralls -v
+    - travis_retry php vendor/bin/php-coveralls -v
 
 
