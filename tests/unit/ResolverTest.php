@@ -46,27 +46,30 @@ class ResolverTest extends Unit
 
     /**
      * @test
-     * @expectedException InvalidArgumentException
      */
     public function getTypeHintClassesShouldThrowExceptionForNonExistingClass() : void
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         Selami\Stdlib\Resolver::getParameterHints('NonExistingClass', '__construct');
     }
 
     /**
      * @test
-     * @expectedException InvalidArgumentException
      */
     public function getTypeHintClassesShouldThrowExceptionForNonExistingMethod() : void
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         Selami\Stdlib\Resolver::getParameterHints(TypeHintedClass::class, 'nonExistingMethod');
     }
     /**
      * @test
-     * @expectedException InvalidArgumentException
      */
     public function getTypeHintClassesShouldThrowExceptionForNonExistingClassHint() : void
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         Selami\Stdlib\Resolver::getParameterHints(TypeHintedClass::class, 'method2');
     }
 }

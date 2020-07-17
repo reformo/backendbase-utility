@@ -1,6 +1,7 @@
 <?php
 namespace SelamiTest;
 
+use Selami\Stdlib\Exception\InvalidSemverPatternException;
 use Selami\Stdlib\Semver;
 
 class SemverTest extends \Codeception\Test\Unit
@@ -73,10 +74,10 @@ class SemverTest extends \Codeception\Test\Unit
 
     /**
      * @test
-     * @expectedException \Selami\Stdlib\Exception\InvalidSemverPatternException
      */
     public function shouldFailForInvalidVersion() : void
     {
+        $this->expectException(InvalidSemverPatternException::class);
         $version = '2.0.a';
         $semver = Semver::createFromString($version);
         $this->assertEquals('3.0.6', $semver->getNextMajorRelease());

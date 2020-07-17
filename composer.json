@@ -11,16 +11,16 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.2"
+        "php": "^7.4"
     },
     "require-dev": {
-        "codeception/codeception": "^2.5",
-        "php-coveralls/php-coveralls": "^2.2"
+        "codeception/codeception": "^4.1",
+        "php-coveralls/php-coveralls": "^v2.2.0",
+        "codeception/module-asserts": "^1.2"
     },
     "autoload": {
         "psr-4": {
-            "Selami\\Stdlib\\": "src/",
-            "Selami\\Stdlib\\Exception\\": "src/"
+            "Selami\\Stdlib\\": "src/"
 
         }
     },
