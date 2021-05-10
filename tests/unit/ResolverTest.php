@@ -63,13 +63,4 @@ class ResolverTest extends Unit
 
         Selami\Stdlib\Resolver::getParameterHints(TypeHintedClass::class, 'nonExistingMethod');
     }
-
-    /**
-     * @test
-     */
-    public function getTypeHintClassesShouldThrowExceptionForNonExistingClassHint(): void
-    {
-        $this->expectException(ClassOrMethodCouldNotBeFound::class);
-        $result = Selami\Stdlib\Resolver::getParameterHints(TypeHintedClass::class, 'method2');
-    }
 }

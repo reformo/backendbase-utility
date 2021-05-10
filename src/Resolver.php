@@ -74,8 +74,6 @@ class Resolver
         }
 
         try {
-            self::checkClassName($type->getName());
-
             return ['name' => $parameter->name, 'type' => $type->getName()];
         } catch (ReflectionException $e) {
             throw new ClassOrMethodCouldNotBeFound($e->getMessage());
