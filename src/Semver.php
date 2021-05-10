@@ -1,14 +1,16 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Selami\Stdlib;
 
 use Selami\Stdlib\Exception\InvalidSemverPatternException;
 
+use function preg_match;
+use function sprintf;
+
 /**
- * Class Semver
  * Semantic Versioning 2.0.0 compatible version handling
- * @package Selami\Stdlib
  */
 final class Semver
 {
@@ -20,28 +22,30 @@ final class Semver
 
     private function __construct(int $major, int $minor, int $patch, ?string $preRelase = null)
     {
-        $this->major = $major;
-        $this->minor = $minor;
-        $this->patch = $patch;
+        $this->major      = $major;
+        $this->minor      = $minor;
+        $this->patch      = $patch;
         $this->preRelease = $preRelase;
     }
 
-    public static function createFromString(string $version) : self
+    public static function createFromString(string $version): self
     {
         $preRelease = null;
-        if (!preg_match(self::$semverPattern, $version, $match)) {
+        if (! preg_match(self::$semverPattern, $version, $match)) {
             throw new InvalidSemverPatternException(
                 sprintf('%s is not valid semver compatible version name', $version)
             );
         }
-        [,$major, $minor, $patch, $preRelease] = $match;
+
+        [, $major, $minor, $patch, $preRelease] = $match;
         if ($preRelease === '') {
             $preRelease = null;
         }
+
         return new self((int) $major, (int) $minor, (int) $patch, $preRelease);
     }
 
-    public function getCurrent() : string
+    public function getCurrent(): string
     {
         return $this->major . '.'
             . $this->minor . '.'
@@ -49,16 +53,17 @@ final class Semver
             . $this->preRelease;
     }
 
-    public function getNextPatchRelease() : string
+    public function getNextPatchRelease(): string
     {
         $patch = $this->patch;
         if ($this->preRelease === null) {
             $patch++;
         }
+
         return $this->major . '.' . $this->minor . '.' . $patch;
     }
 
-    public function getNextMinorRelease() : string
+    public function getNextMinorRelease(): string
     {
         $minor = $this->minor;
         $patch = $this->patch;
@@ -67,10 +72,11 @@ final class Semver
 
             $patch = 0;
         }
+
         return $this->major . '.' . $minor . '.' . $patch;
     }
 
-    public function getNextMajorRelease() : string
+    public function getNextMajorRelease(): string
     {
         $major = $this->major;
         $minor = $this->minor;
@@ -80,6 +86,7 @@ final class Semver
             $minor = 0;
             $patch = 0;
         }
+
         return $major . '.' . $minor . '.' . $patch;
     }
 }

@@ -1,40 +1,45 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Selami\Stdlib;
 
+use function basename;
+use function strpos;
+use function substr;
+use function trim;
+
 class BaseUrlExtractor
 {
-    public static function getBaseUrl(array $httpServerData) : string
+    public static function getBaseUrl(array $httpServerData): string
     {
-        $protocol = self::getProtocol($httpServerData);
-        $host = self::getHost($httpServerData);
-        $uriPath = $httpServerData['REQUEST_URI'] ?? '';
-        $filename = $httpServerData['SCRIPT_FILENAME'] ?? '';
+        $protocol   = self::getProtocol($httpServerData);
+        $host       = self::getHost($httpServerData);
+        $uriPath    = $httpServerData['REQUEST_URI'] ?? '';
+        $filename   = $httpServerData['SCRIPT_FILENAME'] ?? '';
         $scriptName = $httpServerData['SCRIPT_NAME'];
-        $phpSelf = $httpServerData['PHP_SELF'];
-        $baseUrl = self::getRelativeBaseUrl($scriptName, $phpSelf, $filename);
+        $phpSelf    = $httpServerData['PHP_SELF'];
+        $baseUrl    = self::getRelativeBaseUrl($scriptName, $phpSelf, $filename);
+
         return trim($protocol . '://' . $host . $baseUrl, '/');
     }
 
-
-
-    public static function getProtocol(array $httpServerData) : string
+    public static function getProtocol(array $httpServerData): string
     {
         if (isset($httpServerData['HTTP_X_FORWARDED_PROTO'])) {
             return $httpServerData['HTTP_X_FORWARDED_PROTO'];
         }
-        return isset($httpServerData['HTTPS']) && $httpServerData['HTTPS'] !== 'Off' ? 'https': 'http';
+
+        return isset($httpServerData['HTTPS']) && $httpServerData['HTTPS'] !== 'Off' ? 'https' : 'http';
     }
 
-    public static function getHost($httpServerData) : string
+    public static function getHost($httpServerData): string
     {
         return $httpServerData['HTTP_HOST'];
     }
 
-    public static function getRelativeBaseUrl($scriptName, $phpSelf, $filename) : string
+    public static function getRelativeBaseUrl($scriptName, $phpSelf, $filename): string
     {
-
         // Backtrack up the SCRIPT_FILENAME to find the portion
         // matching PHP_SELF.
         $baseUrl  = '/';
@@ -42,8 +47,9 @@ class BaseUrlExtractor
         if ($basename) {
             $path     = ($phpSelf ? trim($phpSelf, '/') : '');
             $basePos  = strpos($path, $basename) ?: 0;
-            $baseUrl .= substr($path, 0, $basePos) ;
+            $baseUrl .= substr($path, 0, $basePos);
         }
+
         return $baseUrl;
     }
 }

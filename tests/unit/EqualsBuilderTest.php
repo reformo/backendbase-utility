@@ -1,31 +1,30 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SelamiTest;
 
 use Codeception\Test\Unit;
 use Selami\Stdlib\EqualsBuilder;
+use stdClass;
+use UnitTester;
 
 class EqualsBuilderTest extends Unit
 {
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
+    protected UnitTester $tester;
 
-    protected function _before()
+    protected function _before(): void
     {
     }
 
-    protected function _after()
+    protected function _after(): void
     {
     }
-
 
     /**
      * @test
-     *
      */
-    public function shouldReturnTrueForEqualValues() : void
+    public function shouldReturnTrueForEqualValues(): void
     {
         $result = EqualsBuilder::create()
             ->append(1, 1)
@@ -34,15 +33,16 @@ class EqualsBuilderTest extends Unit
             ->isEquals();
         $this->assertTrue($result);
     }
+
     /**
-     * @test
-     * @dataProvider returnFalseDataProvider
      * @param array $firstValues
      * @param array $secondValues
      * @param array $thirdValues
      *
+     * @test
+     * @dataProvider returnFalseDataProvider
      */
-    public function shouldReturnFalseForEqualValues(array $firstValues, array $secondValues, array $thirdValues) : void
+    public function shouldReturnFalseForEqualValues(array $firstValues, array $secondValues, array $thirdValues): void
     {
         $result = EqualsBuilder::create()
             ->append($firstValues[0], $firstValues[1])
@@ -58,7 +58,7 @@ class EqualsBuilderTest extends Unit
             [[1, 2], ['str', 'str'], [0.1, 0,1]],
             [[2, 2], ['str', 'string'], [0.1, 0,1]],
             [[2, 2], ['str', 'str'], [ new TestValueObject(2, 'Kedibey'), new TestValueObject(2, 'Mırmır')]],
-            [[2, 2], ['str', 'str'], [ new TestValueObject(2, 'Kedibey'), new \stdClass()]],
+            [[2, 2], ['str', 'str'], [ new TestValueObject(2, 'Kedibey'), new stdClass()]],
         ];
     }
 }
