@@ -5,9 +5,9 @@ declare(strict_types=1);
 use Codeception\Test\Unit;
 use Selami\Stdlib\BaseUrlExtractor;
 
-class myBaseUrlExtractor extends Unit
+class BaseUrlExtractorTest extends Unit
 {
-    protected UnitTester $tester;
+    protected  $tester;
 
     protected function _before(): void
     {

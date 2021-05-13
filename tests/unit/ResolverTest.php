@@ -13,7 +13,7 @@ use UnitTester;
 
 class ResolverTest extends Unit
 {
-    protected UnitTester $tester;
+    protected  $tester;
 
     protected function _before(): void
     {
