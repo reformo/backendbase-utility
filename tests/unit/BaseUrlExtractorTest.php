@@ -2,12 +2,16 @@
 
 declare(strict_types=1);
 
+namespace UnitTest;
+
 use Codeception\Test\Unit;
 use Selami\Stdlib\BaseUrlExtractor;
 
+use function json_decode;
+
 class BaseUrlExtractorTest extends Unit
 {
-    protected  $tester;
+    protected $tester;
 
     protected function _before(): void
     {

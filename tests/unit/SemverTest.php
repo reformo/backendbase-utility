@@ -2,16 +2,15 @@
 
 declare(strict_types=1);
 
-namespace SelamiTest;
+namespace UnitTest;
 
 use Codeception\Test\Unit;
 use Selami\Stdlib\Exception\InvalidSemverPatternException;
 use Selami\Stdlib\Semver;
-use UnitTester;
 
 class SemverTest extends Unit
 {
-    protected  $tester;
+    protected $tester;
 
     protected function _before(): void
     {

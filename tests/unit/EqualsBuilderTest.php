@@ -2,16 +2,15 @@
 
 declare(strict_types=1);
 
-namespace SelamiTest;
+namespace UnitTest;
 
 use Codeception\Test\Unit;
 use Selami\Stdlib\EqualsBuilder;
 use stdClass;
-use UnitTester;
 
 class EqualsBuilderTest extends Unit
 {
-    protected  $tester;
+    protected $tester;
 
     protected function _before(): void
     {

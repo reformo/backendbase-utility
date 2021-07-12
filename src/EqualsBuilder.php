@@ -55,7 +55,7 @@ final class EqualsBuilder
             return false;
         }
 
-        if (get_class($leftHandedValue) !== get_class($rightHandedValue)) {
+        if ($leftHandedValue::class !== $rightHandedValue::class) {
             $this->isEquals = false;
 
             return false;

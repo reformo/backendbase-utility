@@ -2,18 +2,17 @@
 
 declare(strict_types=1);
 
-namespace SelamiTest;
+namespace UnitTest;
 
 use Codeception\Test\Test;
 use Codeception\Test\Unit;
 use Selami;
 use Selami\Resources\TypeHintedClass;
 use Selami\Stdlib\Exception\ClassOrMethodCouldNotBeFound;
-use UnitTester;
 
 class ResolverTest extends Unit
 {
-    protected  $tester;
+    protected $tester;
 
     protected function _before(): void
     {

@@ -2,15 +2,14 @@
 
 declare(strict_types=1);
 
-namespace SelamiTest;
+namespace UnitTest;
 
 use Codeception\Test\Unit;
 use Selami\Stdlib\CaseConverter;
-use UnitTester;
 
 class CaseConverterTest extends Unit
 {
-    protected  $tester;
+    protected $tester;
 
     protected function _before(): void
     {
