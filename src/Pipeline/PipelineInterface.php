@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace Selami\Stdlib\Pipeline;
 
+use Psr\Container\ContainerInterface;
+
 interface PipelineInterface
 {
-    public function pipe(callable $stage): PipelineInterface;
+    public function pipe($stage): PipelineInterface;
 
-    public function fromContainer(string $className): callable;
+    public static function withContainer(ContainerInterface $container): self;
 
-    public function process($payload): void;
+    public function process($payload);
 }
