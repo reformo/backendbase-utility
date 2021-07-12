@@ -10,6 +10,6 @@ class PipelineFactory
 {
     public function __invoke(ContainerInterface $container): Pipeline
     {
-        return new Pipeline($container);
+        return Pipeline::withContainer($container);
     }
 }
