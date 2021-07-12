@@ -10,8 +10,9 @@ use Selami\Resources\Pipelines\Adder;
 use Selami\Resources\Pipelines\Multiplier;
 use Selami\Stdlib\Pipeline\InvalidStageException;
 use Selami\Stdlib\Pipeline\Pipeline;
+use Selami\Stdlib\Pipeline\PipelineInterface;
 use Selami\Stdlib\Pipeline\StageDoesNotExistException;
-
+use Selami\Stdlib\Pipeline\PipelineFactory;
 class PipelineTest extends Unit
 {
     protected $tester;
@@ -21,6 +22,7 @@ class PipelineTest extends Unit
     {
         $this->serviceManager = new ServiceManager([
             'factories' => [
+                PipelineInterface::class => PipelineFactory::class,
                 Adder::class => InvokableFactory::class,
             ],
         ]);
@@ -35,7 +37,7 @@ class PipelineTest extends Unit
      */
     public function shouldSuccessfullyCalculateUsingPipes() : void
     {
-        $pipeline = Pipeline::withContainer($this->serviceManager)
+        $pipeline = $this->serviceManager->get(PipelineInterface::class)
             ->pipe(Adder::class)
             ->pipe(new Multiplier(2));
 
