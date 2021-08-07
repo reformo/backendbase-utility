@@ -16,7 +16,8 @@
         "psr/container": "^1.0"
     },
     "suggest": {
-        "ext-libxml": "TagAndAttributeRemover needs this extention"
+        "ext-libxml": "TagAndAttributeRemover needs this extention",
+        "ext-intl": "Slugify needs this extension"
     },
     "require-dev": {
         "codeception/codeception": "^4.1",
@@ -38,7 +39,6 @@
         }
     },
     "scripts": {
-
         "cs-check": "vendor/bin/phpcs --standard=Doctrine",
         "cs-fix": "vendor/bin/phpcbf --standard=Doctrine"
 
