@@ -6,13 +6,14 @@ cache:
 php:
   - 7.4
   - 8.0
+  - nightly
 before_script:
   - composer install
 script:
   - export XDEBUG_MODE=coverage
   - vendor/bin/codecept run --coverage --coverage-xml --coverage-html
 after_script:
-  - if [ $TRAVIS_PHP_VERSION == '7.4' ]; then php vendor/bin/php-coveralls; fi
+  - if [ $TRAVIS_PHP_VERSION == '8.0' ]; then php vendor/bin/php-coveralls; fi
 after_success:
   - travis_retry php vendor/bin/php-coveralls -v
 
