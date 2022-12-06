@@ -42,6 +42,10 @@
         "cs-check": "vendor/bin/phpcs --standard=Doctrine",
         "cs-fix": "vendor/bin/phpcbf --standard=Doctrine"
 
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
-
 }
