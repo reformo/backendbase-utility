@@ -50,13 +50,17 @@ class SlugifierTest extends Unit
                             'Meinung: Impfstoff-Mangel für die Ärmsten - eine moralische Bankrotterklärung',
                             'Türkiye\'nin İstanbul Sözleşmesi serüveni',
                             'Во Франции прошли протесты против ужесточения мер',
-                            '1234'
+                            '1234',
+                            'déjà σσς iıii',
+                            '�Düsseldorf�'
                         ],
                         [
                             'meinung-impfstoff-mangel-fur-die-armsten-eine-moralische-bankrotterklarung',
                             'turkiye-nin-istanbul-sozlesmesi-seruveni',
                             'vo-francii-prosli-protesty-protiv-uzestocenia-mer',
-                            '1234'
+                            '1234',
+                            'deja-sss-iiii',
+                            '-dusseldorf-'
                         ],
                     ]
         ];
