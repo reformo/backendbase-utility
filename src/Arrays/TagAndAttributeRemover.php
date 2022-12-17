@@ -26,18 +26,10 @@ use const LIBXML_HTML_NOIMPLIED;
 
 class TagAndAttributeRemover
 {
-    private DOMDocument $domHtml;
-    private array $allowedTags;
-    private array $currentTags;
-    private array $allowedUrlPrefixes;
     private static array $urlAttributes = ['href', 'src'];
 
-    private function __construct(DOMDocument $domHtml, array $currentTags, array $allowedTags, array $allowedUrlPrefixes)
+    private function __construct(private DOMDocument $domHtml, private array $currentTags, private array $allowedTags, private array $allowedUrlPrefixes)
     {
-        $this->domHtml            = $domHtml;
-        $this->currentTags        = $currentTags;
-        $this->allowedTags        = $allowedTags;
-        $this->allowedUrlPrefixes = $allowedUrlPrefixes;
     }
 
     public static function cleanHtml(string $html, string $allowedTagsAndAttributesList, ?string $allowedUrlPrefixes = ''): string
@@ -66,7 +58,7 @@ class TagAndAttributeRemover
 
     private static function safeExplodeString(string $delimiter, string $string, ?bool $allowEmptyArrayElement = true): array
     {
-        if (strpos($string, $delimiter) !== false) {
+        if (str_contains($string, $delimiter)) {
             return explode($delimiter, $string);
         }
 
@@ -154,7 +146,7 @@ class TagAndAttributeRemover
     {
         $isAllowed = 0;
         foreach ($this->allowedUrlPrefixes as $allowedUrlPrefix) {
-            if (strpos($attribute->nodeValue, $allowedUrlPrefix) === 0) {
+            if (str_starts_with($attribute->nodeValue, $allowedUrlPrefix)) {
                 $isAllowed = 1;
                 break;
             }

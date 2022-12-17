@@ -14,7 +14,7 @@ use function is_object;
 
 final class EqualsBuilder
 {
-    private $isEquals = true;
+    private bool $isEquals = true;
 
     public static function create(): EqualsBuilder
     {
@@ -55,7 +55,7 @@ final class EqualsBuilder
             return false;
         }
 
-        if (get_class($leftHandedValue) !== get_class($rightHandedValue)) {
+        if ($leftHandedValue::class !== $rightHandedValue::class) {
             $this->isEquals = false;
 
             return false;

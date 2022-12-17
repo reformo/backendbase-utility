@@ -9,11 +9,8 @@ use function is_string;
 
 class ArrayExtractor
 {
-    private array $model;
-
-    private function __construct(array $model)
+    private function __construct(private array $model)
     {
-        $this->model = $model;
     }
 
     public static function withModel(array $model): self

@@ -15,17 +15,9 @@ use function sprintf;
 final class Semver
 {
     private static string $semverPattern = '/(\d+).(\d+).(\d+)(|[-.+](?:dev|alpha|beta|rc|stable)(.*?))$/i';
-    private int $major;
-    private int $minor;
-    private int $patch;
-    private ?string $preRelease;
 
-    private function __construct(int $major, int $minor, int $patch, ?string $preRelease = null)
+    private function __construct(private int $major, private int $minor, private int $patch, private ?string $preRelease = null)
     {
-        $this->major      = $major;
-        $this->minor      = $minor;
-        $this->patch      = $patch;
-        $this->preRelease = $preRelease;
     }
 
     public static function createFromString(string $version): self

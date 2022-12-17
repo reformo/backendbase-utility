@@ -7,16 +7,13 @@ namespace Selami\Stdlib\Pipeline;
 use Psr\Container\ContainerInterface;
 use Selami\Stdlib\Resolver;
 use ReflectionClass;
-use function PHPUnit\Framework\isInstanceOf;
 
 class Pipeline implements PipelineInterface
 {
-    private ?ContainerInterface $container;
     private array $stages = [];
 
-    private function __construct(?ContainerInterface $container = null)
+    private function __construct(private ?\Psr\Container\ContainerInterface $container = null)
     {
-        $this->container = $container;
     }
 
     public static function new(): self

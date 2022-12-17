@@ -31,7 +31,7 @@ class Resolver
         self::checkMethodName($className, $methodName);
         try {
             $method = new ReflectionMethod($className, $methodName);
-        } catch (ReflectionException $e) {
+        } catch (ReflectionException) {
             throw new ClassOrMethodCouldNotBeFound(
                 sprintf('%s::%s coulnd not be found.', $className, $methodName)
             );

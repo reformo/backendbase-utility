@@ -20,7 +20,7 @@ class ArrayKeysCamelCaseConverter
                 $value = self::convertArrayKeys($value);
             }
 
-            if (is_string($key) && strpos($key, '_') !== false) {
+            if (is_string($key) && str_contains($key, '_')) {
                 $key = CaseConverter::toCamelCase($key);
             }
 
