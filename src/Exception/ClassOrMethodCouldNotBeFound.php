@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Selami\Stdlib\Exception;
+namespace Backendbase\Utility\Exception;
 
 use InvalidArgumentException;
 

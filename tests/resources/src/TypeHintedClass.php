@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Selami\Resources;
+namespace Backendbase\Resources;
 
 use Codeception\Test\NonExistingClass;
 use Codeception\Test\Test;

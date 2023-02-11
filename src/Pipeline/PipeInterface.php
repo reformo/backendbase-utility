@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Selami\Stdlib\Pipeline;
+namespace Backendbase\Utility\Pipeline;
 
 interface PipeInterface
 {

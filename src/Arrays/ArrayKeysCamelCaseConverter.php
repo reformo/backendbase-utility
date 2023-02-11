@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Selami\Stdlib\Arrays;
+namespace Backendbase\Utility\Arrays;
 
-use Selami\Stdlib\CaseConverter;
+use Backendbase\Utility\CaseConverter;
 
 use function is_array;
 use function is_string;

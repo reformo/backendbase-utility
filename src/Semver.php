@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Selami\Stdlib;
+namespace Backendbase\Utility;
 
-use Selami\Stdlib\Exception\InvalidSemverPatternException;
+use Backendbase\Utility\Exception\InvalidSemverPatternException;
 
 use function preg_match;
 use function sprintf;

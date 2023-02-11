@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Selami\Stdlib\Arrays;
+namespace Backendbase\Utility\Arrays;
 
 use function is_int;
 use function is_string;

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace UnitTest;
 
 use Codeception\Test\Unit;
-use Selami\Stdlib\Exception\InvalidArgumentException;
-use Selami\Stdlib\Slugifier;
+use Backendbase\Utility\Exception\InvalidArgumentException;
+use Backendbase\Utility\Slugifier;
 
 class SlugifierTest extends Unit
 {

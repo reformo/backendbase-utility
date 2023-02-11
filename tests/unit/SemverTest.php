@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace UnitTest;
 
 use Codeception\Test\Unit;
-use Selami\Stdlib\Exception\InvalidSemverPatternException;
-use Selami\Stdlib\Semver;
+use Backendbase\Utility\Exception\InvalidSemverPatternException;
+use Backendbase\Utility\Semver;
 
 class SemverTest extends Unit
 {

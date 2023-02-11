@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Selami\Stdlib\Arrays;
+namespace Backendbase\Utility\Arrays;
 
 use function array_key_exists;
 use function filter_var;

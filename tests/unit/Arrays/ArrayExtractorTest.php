@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace UnitTest\Arrays;
 
 use PHPUnit\Framework\TestCase;
-use Selami\Stdlib\Arrays\ArrayExtractor;
+use Backendbase\Utility\Arrays\ArrayExtractor;
 
 final class ArrayExtractorTest extends TestCase
 {

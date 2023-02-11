@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Selami\Resources\Pipelines;
+namespace Backendbase\Resources\Pipelines;
 
-use Selami\Stdlib\Pipeline\PipeInterface;
+use Backendbase\Utility\Pipeline\PipeInterface;
 
 class Multiplier implements PipeInterface
 {

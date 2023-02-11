@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Selami\\Stdlib\\": "src/"
+            "Backendbase\\Utility\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Selami\\Resources\\" : "tests/resources/src/",
+            "Backendbase\\Resources\\" : "tests/resources/src/",
             "UnitTest\\": "tests/unit"
         }
     },

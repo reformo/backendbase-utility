@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace UnitTest;
 
 use Codeception\Test\Unit;
-use Selami\Stdlib\EqualsBuilder;
+use Backendbase\Utility\EqualsBuilder;
 use stdClass;
 
 class EqualsBuilderTest extends Unit

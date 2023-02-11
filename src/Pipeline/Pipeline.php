@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Selami\Stdlib\Pipeline;
+namespace Backendbase\Utility\Pipeline;
 
 use Psr\Container\ContainerInterface;
-use Selami\Stdlib\Resolver;
+use Backendbase\Utility\Resolver;
 use ReflectionClass;
 
 class Pipeline implements PipelineInterface

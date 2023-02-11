@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace UnitTest;
 
 use Codeception\Test\Unit;
-use Selami\Stdlib\CaseConverter;
+use Backendbase\Utility\CaseConverter;
 
 class CaseConverterTest extends Unit
 {

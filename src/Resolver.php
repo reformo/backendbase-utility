@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Selami\Stdlib;
+namespace Backendbase\Utility;
 
 use ReflectionException;
 use ReflectionMethod;
 use ReflectionParameter;
-use Selami\Stdlib\Exception\ClassOrMethodCouldNotBeFound;
+use Backendbase\Utility\Exception\ClassOrMethodCouldNotBeFound;
 
 use function assert;
 use function class_exists;

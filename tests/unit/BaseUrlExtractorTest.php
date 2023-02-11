@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace UnitTest;
 
 use Codeception\Test\Unit;
-use Selami\Stdlib\BaseUrlExtractor;
+use Backendbase\Utility\BaseUrlExtractor;
 
 use function json_decode;
 

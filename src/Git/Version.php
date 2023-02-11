@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Selami\Stdlib\Git;
+namespace Backendbase\Utility\Git;
 
 use function exec;
 

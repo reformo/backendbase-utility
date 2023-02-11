@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Selami\Stdlib;
+namespace Backendbase\Utility;
 
-use Selami\Stdlib\Exception\InvalidArgumentException;
+use Backendbase\Utility\Exception\InvalidArgumentException;
 use Transliterator;
 
 class Slugifier

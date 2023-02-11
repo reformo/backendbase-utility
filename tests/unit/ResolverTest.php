@@ -6,9 +6,9 @@ namespace UnitTest;
 
 use Codeception\Test\Test;
 use Codeception\Test\Unit;
-use Selami;
-use Selami\Resources\TypeHintedClass;
-use Selami\Stdlib\Exception\ClassOrMethodCouldNotBeFound;
+use Backendbase;
+use Backendbase\Resources\TypeHintedClass;
+use Backendbase\Utility\Exception\ClassOrMethodCouldNotBeFound;
 
 class ResolverTest extends Unit
 {
@@ -31,7 +31,7 @@ class ResolverTest extends Unit
      */
     public function getTypeHintClassesSuccessfully(string $className, string $methodName, array $expected): void
     {
-        $returned = Selami\Stdlib\Resolver::getParameterHints($className, $methodName);
+        $returned = Backendbase\Utility\Resolver::getParameterHints($className, $methodName);
 
         $this->assertEquals($expected, $returned);
     }
@@ -50,7 +50,7 @@ class ResolverTest extends Unit
     public function getTypeHintClassesShouldThrowExceptionForNonExistingClass(): void
     {
         $this->expectException(ClassOrMethodCouldNotBeFound::class);
-        Selami\Stdlib\Resolver::getParameterHints('NonExistingClass', '__construct');
+        Backendbase\Utility\Resolver::getParameterHints('NonExistingClass', '__construct');
     }
 
     /**
@@ -60,6 +60,6 @@ class ResolverTest extends Unit
     {
         $this->expectException(ClassOrMethodCouldNotBeFound::class);
 
-        Selami\Stdlib\Resolver::getParameterHints(TypeHintedClass::class, 'nonExistingMethod');
+        Backendbase\Utility\Resolver::getParameterHints(TypeHintedClass::class, 'nonExistingMethod');
     }
 }

@@ -6,13 +6,13 @@ use Codeception\Test\Unit;
 use Laminas\ServiceManager\ServiceManager;
 use Psr\Container\ContainerInterface;
 use Laminas\ServiceManager\Factory\InvokableFactory;
-use Selami\Resources\Pipelines\Adder;
-use Selami\Resources\Pipelines\Multiplier;
-use Selami\Stdlib\Pipeline\InvalidStageException;
-use Selami\Stdlib\Pipeline\Pipeline;
-use Selami\Stdlib\Pipeline\PipelineInterface;
-use Selami\Stdlib\Pipeline\StageDoesNotExistException;
-use Selami\Stdlib\Pipeline\PipelineFactory;
+use Backendbase\Resources\Pipelines\Adder;
+use Backendbase\Resources\Pipelines\Multiplier;
+use Backendbase\Utility\Pipeline\InvalidStageException;
+use Backendbase\Utility\Pipeline\Pipeline;
+use Backendbase\Utility\Pipeline\PipelineInterface;
+use Backendbase\Utility\Pipeline\StageDoesNotExistException;
+use Backendbase\Utility\Pipeline\PipelineFactory;
 class PipelineTest extends Unit
 {
     protected $tester;
