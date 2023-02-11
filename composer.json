@@ -1,6 +1,6 @@
 {
-    "name": "selami/stdlib",
-    "description": "Standard Library for Selami libraries.",
+    "name": "reformo/backendbase-utility",
+    "description": "Standard Library for Backendbase libraries.",
     "type": "library",
     "license": "MIT",
     "authors": [
