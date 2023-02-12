@@ -1,4 +1,4 @@
-# Backendbase Stdlib
+# Backendbase Utility
 
 [![Build Status](https://travis-ci.com/reformo/backendbase-utility.svg?branch=master)](https://travis-ci.com/reformo/backendbase-utility) [![Coverage Status](https://coveralls.io/repos/github/reformo/backendbase-utility/badge.svg?branch=master)](https://coveralls.io/github/reformo/backendbase-utility?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/reformo/backendbase-utility/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/reformo/backendbase-utility/?branch=master)
 
@@ -14,7 +14,7 @@ This class provides methods to build a equals method for any class. Intended to 
 <?php 
 declare(strict_types=1);
 
-use Backendbase\Stdlib\EqualsBuilder;
+use Backendbase\Utility\EqualsBuilder;
 
 class SomeValueObject()
 {
@@ -58,7 +58,7 @@ This class provides a method to obtain typehints of a method. Intended to be use
 <?php
 declare(strict_types=1);
 
-use Backendbase\Stdlib\Resolver;
+use Backendbase\Utility\Resolver;
 
 class BlogService {}
 
@@ -96,7 +96,7 @@ This class provides methods to convert strings to camelCase, PascalCase or snake
 <?php
 declare(strict_types=1);
 
-use Backendbase\Stdlib\CaseConverter;
+use Backendbase\Utility\CaseConverter;
 
 $source = 'test string';
 $result = CaseConverter::toCamelCase($source); // returns: testString
@@ -114,7 +114,7 @@ This class provides a methods to get short version of git. For deployments using
 
 declare(strict_types=1);
 
-use Backendbase\Stdlib\Git\Version;
+use Backendbase\Utility\Git\Version;
 
 $gitVersion = Version::short();
 
@@ -146,7 +146,7 @@ Caution: This method may not return real base url if you are behind some service
 <?php
 declare(strict_types=1);
 
-use Backendbase\Stdlib\BaseUrlExtractor;
+use Backendbase\Utility\BaseUrlExtractor;
 
 $baseUrl = BaseUrlExtractor::getBaseUrl($_SERVER);
 
