@@ -10,10 +10,10 @@ use function is_array;
 use function is_int;
 use function is_string;
 use function password_hash;
+use function htmlspecialchars;
 
 use const FILTER_FLAG_NO_ENCODE_QUOTES;
 use const FILTER_SANITIZE_EMAIL;
-use const FILTER_SANITIZE_STRING;
 use const PASSWORD_ARGON2ID;
 
 class PayloadSanitizer
@@ -27,7 +27,7 @@ class PayloadSanitizer
         $sanitizedPayload = [];
         foreach ($payload as $key => $value) {
             if (is_string($key)) {
-                $key = filter_var($key, FILTER_SANITIZE_STRING);
+                $key = htmlspecialchars($key);
             }
 
             $currentKeyValue = $keyValue . '.' . $key;
@@ -57,7 +57,7 @@ class PayloadSanitizer
             }
 
             if (is_string($value)) {
-                $sanitizedPayload[$key] =  filter_var($value, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+                $sanitizedPayload[$key] =  htmlspecialchars($value);
                 continue;
             }
 
