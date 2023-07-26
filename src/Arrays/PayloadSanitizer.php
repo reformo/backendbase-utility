@@ -27,7 +27,7 @@ class PayloadSanitizer
         $sanitizedPayload = [];
         foreach ($payload as $key => $value) {
             if (is_string($key)) {
-                $key = htmlspecialchars($key);
+                $key = htmlspecialchars($key,ENT_COMPAT | ENT_HTML5);
             }
 
             $currentKeyValue = $keyValue . '.' . $key;
@@ -57,7 +57,7 @@ class PayloadSanitizer
             }
 
             if (is_string($value)) {
-                $sanitizedPayload[$key] =  htmlspecialchars($value);
+                $sanitizedPayload[$key] = htmlspecialchars($value, ENT_COMPAT | ENT_HTML5);
                 continue;
             }
 
