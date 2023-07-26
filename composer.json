@@ -11,18 +11,18 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "ext-dom": "*",
-        "psr/container": "^1.0"
+        "psr/container": "^1.0|^2.0"
     },
     "suggest": {
         "ext-libxml": "TagAndAttributeRemover needs this extention",
         "ext-intl": "Slugify needs this extension"
     },
     "require-dev": {
-        "codeception/codeception": "^4.1",
+        "codeception/codeception": "^5.0",
         "php-coveralls/php-coveralls": "^v2.2.0",
-        "codeception/module-asserts": "^1.2",
+        "codeception/module-asserts": "^2.0",
         "squizlabs/php_codesniffer": "^3.6",
         "doctrine/coding-standard": "^9.0",
         "laminas/laminas-servicemanager": "^3.6"
