@@ -9,8 +9,7 @@ use Psr\Container\ContainerInterface;
 interface PipelineInterface
 {
     public function pipe($stage): PipelineInterface;
-
+    public function newPipeline(): PipelineInterface;
     public static function withContainer(ContainerInterface $container): self;
-
     public function process($payload);
 }

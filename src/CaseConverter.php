@@ -47,4 +47,6 @@ class CaseConverter
 
         return str_replace(' ', $separator, $lowercase);
     }
+
+
 }

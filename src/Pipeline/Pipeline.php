@@ -72,4 +72,11 @@ class Pipeline implements PipelineInterface
         return $this->container->has($argumentType) ? $this->container->get($argumentType) :
             $this->container->get($argumentName);
     }
+
+    public function newPipeline(): PipelineInterface
+    {
+        $new = clone $this;
+        $new->stages = [];
+        return $new;
+    }
 }
